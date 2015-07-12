@@ -2,8 +2,8 @@ TOP  := $(shell pwd)
 WORK := $(TOP)/work
 
 # set these two values to the tags (or revisions) you wish to compare
-OLD  := go1.2.2
-NEW  := go1.3
+OLD  := go1.4.2
+NEW  := go1.5beta1
 
 GO_CHECKOUT=$(WORK)/go
 GO_OLD_ROOT=$(WORK)/$(OLD)
@@ -69,28 +69,29 @@ goquery: $(WORK)/goquery-$(OLD).txt $(WORK)/goquery-$(NEW).txt $(BENCHCMP)
 	@$(BENCHCMP) $(WORK)/goquery-$(OLD).txt $(WORK)/goquery-$(NEW).txt
 
 update-$(GO_CHECKOUT): $(GO_CHECKOUT)
-	hg pull --cwd $(GO_CHECKOUT) -u
+	cp -Rv $(GO_CHECKOUT)
 
 update: update-$(GO_CHECKOUT) $(GO_OLD_ROOT) $(GO_NEW_ROOT)
-	hg pull --cwd $(GO_OLD_ROOT) -u
-	hg pull --cwd $(GO_NEW_ROOT) -u
-	rm -rf $(GO_OLD_ROOT)/bin $(GO_NEW_ROOT)/bin
+	git pull -b ${OLD} $(GO_OLD_ROOT)
+	git pull -b ${NEW} $(GO_NEW_ROOT)
+	#rm -rf $(GO_OLD_ROOT)/bin $(GO_NEW_ROOT)/bin
 	rm -f $(WORK)/*.txt
 
 $(GO_CHECKOUT): 
-	hg clone https://code.google.com/p/go $@
+	#  git clone git@github.com:golang/go.git $@
+	#	hg clone https://code.google.com/p/go $@
 
 $(GO_OLD_ROOT): $(GO_CHECKOUT)
-	hg clone -r $(OLD) $(GO_CHECKOUT) $@
+	#	hg clone -r $(OLD) $(GO_CHECKOUT) $@
 
 $(GO_OLD_BIN): $(GO_OLD_ROOT)
-	cd $(GO_OLD_ROOT)/src ; ./make.bash
+	#	cd $(GO_OLD_ROOT)/src ; ./make.bash
 
 $(GO_NEW_ROOT): $(GO_CHECKOUT)
-	hg clone -r tip $(GO_CHECKOUT) $@
+	#	hg clone -r tip $(GO_CHECKOUT) $@
 
 $(GO_NEW_BIN): $(GO_NEW_ROOT)
-	cd $(GO_NEW_ROOT)/src ; ./make.bash
+	#	cd $(GO_NEW_ROOT)/src ; ./make.bash
 
 $(GO1_BENCH): $(GO_NEW_ROOT)
 
