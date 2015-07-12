@@ -1,0 +1,22 @@
+PASS
+BenchmarkMinSmall	200000000	        14.8 ns/op
+BenchmarkMinMed	 1000000	      1061 ns/op
+BenchmarkMinLarge	   20000	     98087 ns/op
+BenchmarkMinHuge	     100	  14173118 ns/op
+BenchmarkAddTwoSmall	100000000	        20.4 ns/op
+BenchmarkAddFourSmall	30000000	        42.2 ns/op
+BenchmarkAddTwoMed	 1000000	      1165 ns/op
+BenchmarkAddFourMed	  500000	      3811 ns/op
+BenchmarkAddTwoLarge	   10000	    142145 ns/op
+BenchmarkAddFourLarge	    3000	    450354 ns/op
+BenchmarkAddTwoHuge	      50	  24374925 ns/op
+BenchmarkAddFourHuge	      20	  72174829 ns/op
+BenchmarkLogSumExpSmall	 5000000	       326 ns/op
+BenchmarkLogSumExpMed	   50000	     25215 ns/op
+BenchmarkLogSumExpLarge	     500	   2515656 ns/op
+BenchmarkLogSumExpHuge	       5	 252999542 ns/op
+BenchmarkDotSmall	100000000	        16.9 ns/op
+BenchmarkDotMed	 1000000	      1267 ns/op
+BenchmarkDotLarge	   10000	    138638 ns/op
+BenchmarkDotHuge	     100	  18019736 ns/op
+ok  	bench/floats	45.479s

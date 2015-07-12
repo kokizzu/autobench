@@ -1,0 +1,4 @@
+PASS
+BenchmarkCodeEncoder	     100	  13785446 ns/op	 140.76 MB/s
+BenchmarkCodeDecoder	      30	  52564639 ns/op	  36.92 MB/s
+ok  	github.com/benbjohnson/megajson/.bench	3.129s

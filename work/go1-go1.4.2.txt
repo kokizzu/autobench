@@ -1,0 +1,32 @@
+PASS
+BenchmarkBinaryTree17	       1	3610434929 ns/op
+BenchmarkFannkuch11	       1	3209701868 ns/op
+BenchmarkFmtFprintfEmpty	20000000	        88.3 ns/op
+BenchmarkFmtFprintfString	 5000000	       248 ns/op
+BenchmarkFmtFprintfInt	 5000000	       247 ns/op
+BenchmarkFmtFprintfIntInt	 5000000	       377 ns/op
+BenchmarkFmtFprintfPrefixedInt	 5000000	       342 ns/op
+BenchmarkFmtFprintfFloat	 3000000	       432 ns/op
+BenchmarkFmtManyArgs	 1000000	      1488 ns/op
+BenchmarkGobDecode	     100	  11965020 ns/op	  64.15 MB/s
+BenchmarkGobEncode	     100	  10418308 ns/op	  73.67 MB/s
+BenchmarkGzip	       3	 498284535 ns/op	  38.94 MB/s
+BenchmarkGunzip	      10	 108602561 ns/op	 178.68 MB/s
+BenchmarkHTTPClientServer	   30000	     46047 ns/op
+BenchmarkJSONEncode	      50	  25542781 ns/op	  75.97 MB/s
+BenchmarkJSONDecode	      20	  82805313 ns/op	  23.43 MB/s
+BenchmarkMandelbrot200	     300	   4450288 ns/op
+BenchmarkGoParse	     300	   4887710 ns/op	  11.85 MB/s
+BenchmarkRegexpMatchEasy0_32	10000000	       160 ns/op	 198.92 MB/s
+BenchmarkRegexpMatchEasy0_1K	 3000000	       403 ns/op	2537.48 MB/s
+BenchmarkRegexpMatchEasy1_32	10000000	       147 ns/op	 216.75 MB/s
+BenchmarkRegexpMatchEasy1_1K	 1000000	      1056 ns/op	 969.37 MB/s
+BenchmarkRegexpMatchMedium_32	 5000000	       249 ns/op	   4.01 MB/s
+BenchmarkRegexpMatchMedium_1K	   20000	     84432 ns/op	  12.13 MB/s
+BenchmarkRegexpMatchHard_32	  300000	      4155 ns/op	   7.70 MB/s
+BenchmarkRegexpMatchHard_1K	   10000	    130382 ns/op	   7.85 MB/s
+BenchmarkRevcomp	       2	 740884366 ns/op	 343.06 MB/s
+BenchmarkTemplate	      10	 111190621 ns/op	  17.45 MB/s
+BenchmarkTimeParse	 3000000	       441 ns/op
+BenchmarkTimeFormat	 3000000	       410 ns/op
+ok  	_/home/kyz/Dropbox/go/src/github.com/davecheney/autobench/work/go1.5beta1/test/bench/go1	57.323s

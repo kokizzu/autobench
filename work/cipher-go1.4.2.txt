@@ -1,0 +1,8 @@
+PASS
+BenchmarkAESCFBEncrypt	  300000	      4111 ns/op	 248.80 MB/s
+BenchmarkAESCFBDecrypt	  300000	      4158 ns/op	 246.03 MB/s
+BenchmarkAESOFB	  500000	      2955 ns/op	 346.10 MB/s
+BenchmarkAESCTR	  500000	      2802 ns/op	 365.02 MB/s
+BenchmarkAESCBCEncrypt	  500000	      3631 ns/op	 281.99 MB/s
+BenchmarkAESCBCDecrypt	  500000	      3476 ns/op	 294.58 MB/s
+ok  	bench/cipher	9.133s

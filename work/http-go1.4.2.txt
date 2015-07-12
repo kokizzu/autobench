@@ -1,0 +1,19 @@
+PASS
+BenchmarkHeaderWriteSubset	 1000000	      1089 ns/op
+BenchmarkReadRequestChrome	  200000	      7632 ns/op	  80.05 MB/s
+BenchmarkReadRequestCurl	  300000	      4117 ns/op	  18.94 MB/s
+BenchmarkReadRequestApachebench	  300000	      4174 ns/op	  19.64 MB/s
+BenchmarkReadRequestSiege	  300000	      5413 ns/op	  27.89 MB/s
+BenchmarkReadRequestWrk	  500000	      3251 ns/op	  12.30 MB/s
+BenchmarkClientServer	   30000	     57029 ns/op
+BenchmarkClientServerParallel4	   30000	     53481 ns/op
+BenchmarkClientServerParallel64	   30000	     57987 ns/op
+BenchmarkServer	   20000	     94721 ns/op
+BenchmarkServerFakeConnNoKeepAlive	  100000	     20102 ns/op
+BenchmarkServerFakeConnWithKeepAlive	  100000	     11940 ns/op
+BenchmarkServerFakeConnWithKeepAliveLite	  200000	      7163 ns/op
+BenchmarkServerHandlerTypeLen	  200000	     10001 ns/op
+BenchmarkServerHandlerNoLen	  200000	      9119 ns/op
+BenchmarkServerHandlerNoType	  200000	      9537 ns/op
+BenchmarkServerHandlerNoHeader	  200000	      6836 ns/op
+ok  	bench/http	30.744s

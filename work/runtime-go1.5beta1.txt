@@ -1,0 +1,92 @@
+PASS
+BenchmarkAppend	50000000	        32.5 ns/op
+BenchmarkAppend1Byte	20000000	       109 ns/op
+BenchmarkAppend4Bytes	20000000	       108 ns/op
+BenchmarkAppend8Bytes	20000000	       110 ns/op
+BenchmarkAppend16Bytes	20000000	       118 ns/op
+BenchmarkAppend32Bytes	10000000	       119 ns/op
+BenchmarkAppendSpecialCase	50000000	        28.0 ns/op
+BenchmarkSelectUncontended	 5000000	       252 ns/op
+BenchmarkSelectContended	 5000000	       264 ns/op
+BenchmarkSelectNonblock	50000000	        36.2 ns/op
+BenchmarkChanUncontended	20000000	        91.6 ns/op
+BenchmarkChanContended	20000000	        91.5 ns/op
+BenchmarkChanSync	 5000000	       313 ns/op
+BenchmarkChanProdCons0	 5000000	       313 ns/op
+BenchmarkChanProdCons10	10000000	       150 ns/op
+BenchmarkChanProdCons100	20000000	       104 ns/op
+BenchmarkChanProdConsWork0	 2000000	       772 ns/op
+BenchmarkChanProdConsWork10	 3000000	       583 ns/op
+BenchmarkChanProdConsWork100	 3000000	       533 ns/op
+BenchmarkChanCreation	 5000000	       390 ns/op
+BenchmarkChanSem	20000000	       104 ns/op
+BenchmarkCallClosure	300000000	         4.13 ns/op
+BenchmarkCallClosure1	300000000	         4.68 ns/op
+BenchmarkCallClosure2	30000000	        49.8 ns/op
+BenchmarkCallClosure3	30000000	        50.4 ns/op
+BenchmarkCallClosure4	30000000	        50.8 ns/op
+BenchmarkComplex128DivNormal	50000000	        29.7 ns/op
+BenchmarkComplex128DivNisNaN	100000000	        15.0 ns/op
+BenchmarkComplex128DivDisNaN	100000000	        15.5 ns/op
+BenchmarkComplex128DivNisInf	100000000	        12.2 ns/op
+BenchmarkComplex128DivDisInf	100000000	        11.0 ns/op
+BenchmarkConvT2ESmall	50000000	        39.8 ns/op
+BenchmarkConvT2EUintptr	30000000	        56.6 ns/op
+BenchmarkConvT2ELarge	20000000	        79.6 ns/op
+BenchmarkConvT2ISmall	30000000	        42.5 ns/op
+BenchmarkConvT2IUintptr	20000000	        60.4 ns/op
+BenchmarkConvT2ILarge	20000000	        82.1 ns/op
+BenchmarkConvI2E	100000000	        20.5 ns/op
+BenchmarkConvI2I	50000000	        26.8 ns/op
+BenchmarkAssertE2T	100000000	        10.6 ns/op
+BenchmarkAssertE2TLarge	200000000	         7.79 ns/op
+BenchmarkAssertE2I	50000000	        26.8 ns/op
+BenchmarkAssertI2T	100000000	        10.7 ns/op
+BenchmarkAssertI2I	50000000	        27.0 ns/op
+BenchmarkAssertI2E	100000000	        12.7 ns/op
+BenchmarkAssertE2E	1000000000	         2.95 ns/op
+BenchmarkMalloc8	30000000	        40.8 ns/op
+BenchmarkMalloc16	20000000	        62.7 ns/op
+BenchmarkMallocTypeInfo8	30000000	        51.8 ns/op
+BenchmarkMallocTypeInfo16	20000000	        70.1 ns/op
+BenchmarkHashStringSpeed	50000000	        31.7 ns/op
+BenchmarkHashInt32Speed	100000000	        22.9 ns/op
+BenchmarkHashInt64Speed	100000000	        20.9 ns/op
+BenchmarkHashStringArraySpeed	20000000	        89.4 ns/op
+BenchmarkMegMap	100000000	        21.8 ns/op
+BenchmarkMegOneMap	100000000	        14.3 ns/op
+BenchmarkMegEqMap	   10000	    151242 ns/op
+BenchmarkMegEmptyMap	300000000	         4.43 ns/op
+BenchmarkSmallStrMap	100000000	        22.5 ns/op
+BenchmarkMapStringKeysEight_16	50000000	        25.8 ns/op
+BenchmarkMapStringKeysEight_32	50000000	        24.0 ns/op
+BenchmarkMapStringKeysEight_64	50000000	        23.8 ns/op
+BenchmarkMapStringKeysEight_1M	50000000	        24.1 ns/op
+BenchmarkIntMap	100000000	        13.7 ns/op
+BenchmarkRepeatedLookupStrMapKey32	50000000	        37.7 ns/op
+BenchmarkRepeatedLookupStrMapKey1M	    5000	    288667 ns/op
+BenchmarkNewEmptyMap	10000000	       179 ns/op
+BenchmarkMemmove32	300000000	         4.96 ns/op	6448.92 MB/s
+BenchmarkMemmove4K	10000000	       129 ns/op	31615.57 MB/s
+BenchmarkMemmove64K	  300000	      4201 ns/op	15598.08 MB/s
+BenchmarkMemmove4M	    1000	   1214904 ns/op	3452.37 MB/s
+BenchmarkMemmove64M	     100	  23164164 ns/op	2897.10 MB/s
+BenchmarkFinalizer	 1000000	      2134 ns/op
+BenchmarkFinalizerRun	  500000	      3400 ns/op
+BenchmarkStackGrowth	 1000000	      1047 ns/op
+BenchmarkStackGrowthDeep	   20000	     99200 ns/op
+BenchmarkCreateGoroutines	10000000	       173 ns/op
+BenchmarkCreateGoroutinesParallel	10000000	       173 ns/op
+BenchmarkMatmult	100000000	        11.7 ns/op
+BenchmarkIfaceCmp100	10000000	       152 ns/op
+BenchmarkIfaceCmpNil100	10000000	       151 ns/op
+BenchmarkDefer	20000000	       116 ns/op
+BenchmarkDefer10	20000000	       109 ns/op
+BenchmarkDeferMany	10000000	       198 ns/op
+BenchmarkCompareStringEqual	200000000	         7.04 ns/op
+BenchmarkCompareStringIdentical	500000000	         3.30 ns/op
+BenchmarkCompareStringSameLength	300000000	         5.70 ns/op
+BenchmarkCompareStringDifferentLength	2000000000	         1.45 ns/op
+BenchmarkCompareStringBigUnaligned	   10000	    158067 ns/op	6633.79 MB/s
+BenchmarkCompareStringBig	   10000	    173059 ns/op	6059.11 MB/s
+ok  	bench/runtime	163.180s
